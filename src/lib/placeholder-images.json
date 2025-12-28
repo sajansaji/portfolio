@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "An AI-powered system with a futuristic interface.",
+      "imageUrl": "https://www.labellerr.com/blog/content/images/size/w2000/2024/05/Driver-Monitoring-System-.webp",
+      "imageHint": "DMS"
+    },
+    {
+      "id": "project-2",
+      "description": "vSomeIP",
+      "imageUrl": "https://opengraph.githubassets.com/bee052914fda3837b17afef94c55b414114b98e63e885f11ea51e15a139319fe/COVESA/vsomeip",
+      "imageHint": "vSomeIP"
+    },
+    {
+      "id": "project-3",
+      "description": "Yocto",
+      "imageUrl": "https://e-labworks.com/images/training/ypr-860x460_hufca6c21192e465296dd08cdf2cc86043_38921_0x450_resize_q90_h2_lanczos_3.webp",
+      "imageHint": "Yocto"
+    },
+    {
+      "id": "project-4",
+      "description": "edgeai",
+      "imageUrl": "https://pic3.zhimg.com/v2-1323b8172ccc67fe736353e347418c62_1440w.jpg",
+      "imageHint": "edgeai"
+    }
+  ]
+}
