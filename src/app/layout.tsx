@@ -6,9 +6,6 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Sajan Saji | Portfolio',
   description: "Sajan Saji's developer portfolio.",
-  icons: {
-    icon: '/fav.ico',
-  },
 };
 
 export default function RootLayout({
