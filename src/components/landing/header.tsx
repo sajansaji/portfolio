@@ -43,7 +43,7 @@ export default function Header() {
           </Button>
           <ThemeToggle />
           <Button asChild>
-            <a href="/Sajan_Saji_Resume.pdf" download="Sajan_Saji_Resume.pdf">
+            <a href="/SajanSaji-Resume.pdf" download="SajanSaji-Resume.pdf">
               <Download className="mr-2" />
               Resume
             </a>

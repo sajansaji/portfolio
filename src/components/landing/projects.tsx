@@ -12,10 +12,17 @@ import { getImageById } from '@/lib/placeholder-images';
 
 const projectsData = [
   {
+    id: 'project-5',
+    title: 'Advanced Driver Monitoring System',
+    description: 'Developed a real-time ADAS object detection system on an embedded platform that processes video frames to detect obstacles, pedestrians, and vehicles, generates driver warnings, and logs event-based video data, currently functioning as a Level 0 warning-only system',
+    tags: ['OpenCV', 'Python', 'GStreamer', 'Embedded Linux', 'SOME/IP', 'AI', 'Object detection'],
+    imageId: 'project-5',
+  },
+  {
     id: 'project-1',
     title: 'Driver Monitoring System',
-    description: 'A real-time driver monitoring system running on an embedded Linux platform. It performs continuous AI inference, detects critical driver states, and triggers event-based video and image recording without blocking the main pipeline.',
-    tags: ['Python', 'C++', 'GStreamer', 'TI Edge AI SDK', 'Embedded Linux', 'Yocto'],
+    description: 'Developed a real-time Driver Monitoring System on an embedded Linux platform using image classification, performing continuous AI inference to detect critical driver states, logging events via SOME/IP, and sharing triggered video clips with detailed logs to a connected server within the same network.',
+    tags: ['Python', 'C++', 'GStreamer', 'TI Edge AI SDK', 'Embedded Linux', 'Yocto', 'Image classification', 'SOME/IP'],
     imageId: 'project-1',
   },
   {
@@ -43,10 +50,10 @@ const projectsData = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="container mx-auto py-16 md:py-24 px-4">
+    <section id="experience" className="container mx-auto py-16 md:py-24 px-4">
       <div className="text-center mb-12">
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">
-          My Portfolio
+          Professional Experience
         </h2>
       </div>
 
@@ -54,14 +61,14 @@ export default function Projects() {
         {projectsData.map((project) => {
           const image = getImageById(project.imageId);
           return (
-            <Card key={project.id} className="flex flex-col overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
-              <div className="relative h-48 w-full">
+            <Card key={project.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-primary/10">
+              <div className="relative h-48 w-full bg-accent/5">
                 {image && (
                   <Image
                     src={image.imageUrl}
                     alt={image.description}
                     fill
-                    className={project.id === 'project-4' ? 'object-contain' : 'object-cover'}
+                    className={project.id === 'project-4' ? 'object-contain p-4' : 'object-cover'}
                     data-ai-hint={image.imageHint}
                   />
                 )}
@@ -71,12 +78,14 @@ export default function Projects() {
                   <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-0 flex-grow mb-4">
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardDescription className="text-foreground/80 leading-relaxed">
+                    {project.description}
+                  </CardDescription>
                 </CardContent>
                 <CardFooter className="p-0 mt-auto">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
+                      <Badge key={tag} variant="outline" className="bg-primary/5 text-primary border-primary/20">
                         {tag}
                       </Badge>
                     ))}
